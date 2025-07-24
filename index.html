@@ -1,0 +1,453 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandan D S | Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Theme Setup -->
+  <script>
+    document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+  </script>
+</head>
+<body>
+
+  <!-- Animated Background Bubbles -->
+  <div class="bubbles">
+    <span style="left: 10%; animation-delay: 0s;"></span>
+    <span style="left: 20%; animation-delay: 2s;"></span>
+    <span style="left: 30%; animation-delay: 4s;"></span>
+    <span style="left: 40%; animation-delay: 6s;"></span>
+    <span style="left: 50%; animation-delay: 8s;"></span>
+    <span style="left: 60%; animation-delay: 10s;"></span>
+    <span style="left: 70%; animation-delay: 12s;"></span>
+    <span style="left: 80%; animation-delay: 14s;"></span>
+    <span style="left: 90%; animation-delay: 16s;"></span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Chandan D S</h1>
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id="navMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-text">
+      <h1>I am <span class="typing"></span></h1>
+      <p>I’m Chandan DS, a 23-year-old MCA final-year student at The Oxford College of Engineering. I'm deeply passionate about technology, problem-solving, and creating efficient digital solutions that make everyday life easier. What drives my work is a strong curiosity to explore new tools, learn continuously, and apply my knowledge to real-world challenges. I enjoy working both independently and collaboratively, and I’m eager to contribute to impactful projects that push the boundaries of innovation.</p>
+      <a class="btn" href="Chandan_Resume.pdf" download>Download CV</a>
+    </div>
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Chandan D S">
+    </div>
+  </section>
+
+  <!-- Sections... (About, Skills, Projects, Certifications, Services, Contact) -->
+  <!-- Paste your existing sections or let me help rewrite with updated styles -->
+
+  <!-- Back to Top -->
+  <div id="backToTop">↑ Top</div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    new Typed('.typing', {
+      strings: ['Chandan D S', 'a Front-End Developer', 'an MCA Student'],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
+    });
+
+    // Theme Toggle
+    const themeBtn = document.getElementById("themeToggle");
+    themeBtn.onclick = function () {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      themeBtn.innerHTML = next === "dark"
+        ? '<i class="fas fa-moon"></i>'
+        : '<i class="fas fa-sun"></i>';
+    };
+    const initialTheme = document.documentElement.getAttribute("data-theme");
+    themeBtn.innerHTML = initialTheme === "dark"
+      ? '<i class="fas fa-moon"></i>'
+      : '<i class="fas fa-sun"></i>';
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('#navMenu a');
+    hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navLinks.forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+
+    // Back to Top
+    const backToTop = document.getElementById('backToTop');
+    window.onscroll = function () {
+      backToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+    };
+    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+</body>
+</html>
+
+  <div class="wave"></div>
+<!-- Motto / Quote Section -->
+<section class="motto-section" data-aos="fade-up">
+  <h2 class="typing-motto"></h2>
+</section>
+
+
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Hi, I'm Chandan D S from Kushalnagar, Kodagu, currently pursuing my Master's in Computer Applications (MCA). I'm passionate about technology and eager to start my career in the IT industry. Alongside my academic journey, I enjoy playing cricket, volleyball, and football. I also love reading books, traveling, listening to music, and watching series. I'm actively looking for job opportunities where I can apply my skills, learn continuously, and grow professionally.
+
+
+.</p>
+<div class="wave"></div>
+
+ <section id="education" class="education-section">
+    <h2 data-aos="fade-up">Education</h2>
+
+    <div class="education" data-aos="fade-right">
+      <h3>MCA (Master of Computer Applications)</h3>
+      <p>The Oxford College of Engineering, Bangalore</p>
+      <p class="year">2023 – Present</p>
+      <p>Currently pursuing – Final Year</p>
+    </div>
+
+    <div class="education" data-aos="fade-left">
+      <h3>BCA (Bachelor of Computer Applications)</h3>
+      <p>Field Marshal K M Cariappa College, Madikeri</p>
+      <p class="year">2020 – 2023</p>
+      <p>Completed with 7.2 CGPA</p>
+    </div>
+
+    <div class="education" data-aos="fade-right">
+      <h3>Pre-University Course (PUC)</h3>
+      <p>Vivekananda College, Kushalnagar</p>
+      <p class="year">2018 – 2020</p>
+      <p>Completed with 80%</p>
+    </div>
+  </section>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+</body>
+</html>
+<div class="wave"></div>
+
+
+
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="cards">
+      <div class="card">HTML, CSS, JavaScript,SQL</div>
+      <div class="card">React.js, Tailwind CSS, Bootstrap</div>
+      <div class="card">Git, GitHub, Figma</div>
+       <div class="card">Python,Java,C++,C</div>
+      <div class="card">Problem-Solving, Teamwork, Time Management</div>
+    </div>
+  </section>
+  <div class="wave"></div>
+
+
+  <section id="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="cards">
+
+    <div class="card">
+      <img src="project1.jpg" alt="Travel Recommender">
+      <strong>Travel Recommendation System</strong>
+      <p><em>Definition:</em> A personalized trip suggestion engine built using ML and Flask.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Python, Flask, Machine Learning</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>User input-based destination filtering</li>
+        <li>Machine Learning model for travel pattern prediction</li>
+        <li>Dynamic results rendered via Flask backend</li>
+      </ul>
+      <p><strong>Use:</strong> Ideal for travel planning and recommendation-based apps</p>
+    </div>
+
+    <div class="card">
+      <img src="project2.jpg" alt="Heart Predictor">
+      <strong>Heart Disease Prediction System</strong>
+      <p><em>Definition:</em> A predictive tool for assessing heart disease risk based on health metrics.</p>
+      <p><strong>Technologies:</strong> Python, Streamlit, Pandas, Scikit-learn, ML (SVM, Logistic Regression)</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Interactive UI using Streamlit</li>
+        <li>Data preprocessing and feature engineering</li>
+        <li>Multi-model predictions with visual results</li>
+      </ul>
+      <p><strong>Use:</strong> Supports early diagnosis and awareness in healthcare tools</p>
+    </div>
+
+    <div class="card">
+      <img src="project3.jpg" alt="IoT Air Monitor">
+      <strong>Air Monitoring IoT System</strong>
+      <p><em>Definition:</em> A real-time air quality monitor with cloud logging and environmental data sensing.</p>
+      <p><strong>Technologies:</strong> Arduino, C++, MQ135 & DHT11 Sensors, ThingSpeak</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Live AQI monitoring using embedded sensors</li>
+        <li>Data pushed to IoT platform (ThingSpeak)</li>
+        <li>Compact and scalable prototype</li>
+      </ul>
+      <p><strong>Use:</strong> Smart cities, pollution tracking, and educational use</p>
+    </div>
+
+    <div class="card">
+      <img src="project4.jpg" alt="Crack Detection">
+      <strong>Building Crack Detection</strong>
+      <p><em>Definition:</em> AI-powered system to detect cracks in structures via image classification.</p>
+      <p><strong>Technologies:</strong> Python, Deep Learning, OpenCV, CNN models</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Crack vs. no-crack image classification</li>
+        <li>Custom-trained CNN for accuracy</li>
+        <li>Predictive alerts for preventive maintenance</li>
+      </ul>
+      <p><strong>Use:</strong> Infrastructure safety, civil engineering inspection</p>
+    </div>
+
+  </div>
+</section>
+<div class="wave"></div>
+<!-- Certifications Section -->
+<section id="certifications" class="certification-section" data-aos="fade-up">
+  <h2><i class="fas fa-certificate"></i> Certifications</h2>
+
+  <div class="certification-grid">
+
+    <!-- AI/ML Certificate -->
+    <div class="cert-card" data-aos="fade-right">
+      <div class="cert-icon"><i class="fas fa-robot"></i></div>
+      <h3>AI/ML with Python</h3>
+      <p><i class="fas fa-university"></i> Dotch Endeavours</p>
+      <div class="cert-links">
+        <a href="certificates/ai_ml_dotch.pdf" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+        <a href="certificates/ai_ml_dotch.pdf" class="btn outline" download><i class="fas fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <!-- IBM Certificate -->
+    <div class="cert-card" data-aos="fade-up">
+      <div class="cert-icon"><i class="fas fa-brain"></i></div>
+      <h3>Python for Data Science</h3>
+      <p><i class="fas fa-graduation-cap"></i> IBM / Coursera</p>
+      <div class="cert-links">
+        <a href="certificates/ibm_python.pdf" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+        <a href="certificates/ibm_python.pdf" class="btn outline" download><i class="fas fa-download"></i> Download</a>
+      </div>
+    </div>
+
+    <!-- IoT Certificate -->
+    <div class="cert-card" data-aos="fade-left">
+      <div class="cert-icon"><i class="fas fa-microchip"></i></div>
+      <h3>IoT Fundamentals</h3>
+      <p><i class="fas fa-network-wired"></i> Hands-on IoT Training</p>
+      <div class="cert-links">
+        <a href="certificates/iot_cert.pdf" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+        <a href="certificates/iot_cert.pdf" class="btn outline" download><i class="fas fa-download"></i> Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <section id="services" data-aos="fade-up">
+    <h2>Services</h2>
+    <ul class="cards">
+      <li class="card">🔧 Front-End Web Development</li>
+      <li class="card">📱 Responsive UI Design</li>
+      <li class="card">🎨 Backend Development</li>
+      <li class="card">🤝 Database Management</li>
+      <li class="card">🤝 Debugging and Code Optimization</li>
+    </ul>
+  </section>
+  <section id="tools" class="skill-section">
+  <h2 data-aos="fade-up">Tools & Technologies</h2>
+  <div class="soft-skills">
+    <div class="skill" data-aos="fade-up"><i class="fas fa-code"></i> VS Code</div>
+    <div class="skill" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-book"></i> Jupyter Notebook</div>
+    <div class="skill" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-server"></i> XAMPP Server</div>
+    <div class="skill" data-aos="fade-up" data-aos-delay="300"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+    <div class="skill" data-aos="fade-up" data-aos-delay="400"><i class="fab fa-html5"></i> HTML & CSS</div>
+    <div class="skill" data-aos="fade-up" data-aos-delay="500"><i class="fas fa-database"></i> MySQL / MongoDB</div>
+  </div>
+</section>
+<div class="wave"></div>
+
+
+   <!-- Soft Skills Section -->
+  <section id="soft-skills" class="skill-section">
+    <h2 data-aos="fade-up">Soft Skills</h2>
+    <div class="soft-skills">
+      <div class="skill" data-aos="fade-up"><i class="fas fa-comments"></i> Communication</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-users"></i> Teamwork & Collaboration</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-search"></i> Attention to Detail</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-brain"></i> Continuous Learning Mindset</div>
+      <div class="skill" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-user-tie"></i> Leadership</div>
+    </div>
+  </section>
+  <div class="wave"></div>
+
+
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xnnzpbdl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer data-aos="fade-up">
+    &copy; 2025 Chandan D S. All rights reserved.
+  </footer>
+
+  <div id="backToTop">↑ Top</div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    new Typed('.typing', {
+      strings: ['Chandan D S', 'a Front-End Developer', 'an MCA Student'],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    };
+    backToTop.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+  <div class="wave"></div>
+
+ 
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2 data-aos="zoom-in">Contact Me</h2>
+  <div class="contact-info" data-aos="fade-up">
+    <p><i class="fas fa-phone"></i> Phone: 9900665159</p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:chandands1235@gmail.com">chandands1235@gmail.com</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/ChandanDS-prog" target="_blank">github.com/ChandanDS-prog</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/chandan-d-s" target="_blank">linkedin.com/in/chandan-d-s</a></p>
+  </div>
+  <div class="social-icons" data-aos="fade-up">
+    <a href="https://github.com/ChandanDS-prog" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/chandan-d-s" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:chandands1235@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="tel:+919900665159"><i class="fas fa-phone"></i></a>
+  </div>
+</section>
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+</body>
+</html>
+<!-- AOS Animation Script -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+  
+</script>
+<!-- Typed.js Animation for Motto -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  new Typed('.typing-motto', {
+    strings: ['"Code is my canvas."', '"Creating tech that matters."', '"Building, learning, evolving."'],
+    typeSpeed: 60,
+    backSpeed: 30,
+    loop: true
+  });
+</script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+<script>
+  const toggleBtn = document.getElementById('themeToggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+
+  // Load saved theme
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') document.body.classList.add('dark-mode');
+  });
+</script>
+
+</body>
+</html>
